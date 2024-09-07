@@ -1,0 +1,80 @@
+/* General body styling */
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Use a clean, modern font */
+}
+
+/* Ensure the container takes full height of the viewport */
+.full-height {
+    height: 100vh;
+}
+
+/* Center the content */
+.container-fluid.full-height {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form styling */
+.bg-light {
+    background-color: #222222; /* Dark grey background for the form */
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Button styling and animation */
+.btn-primary {
+    background-color: #007bff; /* Blue background */
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.animated-button {
+    animation: pulse 2s infinite; /* Add a pulsing animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Form element styling */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545; /* Red color for errors */
+}
+
+.form-control {
+    background-color: #333333; /* Dark background for input fields */
+    border: 1px solid #444444; /* Slightly lighter border */
+    color: #ffffff; /* White text color */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Blue shadow on focus */
+}

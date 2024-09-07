@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <h2 class="mb-4">Flight Prediction Form</h2>
+    <form action="" method="post" class="needs-validation" novalidate>
+        {{ form.hidden_tag() }}
+        
+        <div class="form-group">
+            {{ form.airline.label(class="form-label") }}
+            {{ form.airline(class="form-control") }}
+            {% if form.airline.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.airline.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.date_of_journey.label(class="form-label") }}
+            {{ form.date_of_journey(class="form-control") }}
+            {% if form.date_of_journey.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.date_of_journey.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.source.label(class="form-label") }}
+            {{ form.source(class="form-control") }}
+            {% if form.source.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.source.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.destination.label(class="form-label") }}
+            {{ form.destination(class="form-control") }}
+            {% if form.destination.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.destination.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.dep_time.label(class="form-label") }}
+            {{ form.dep_time(class="form-control") }}
+            {% if form.dep_time.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.dep_time.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.arrival_time.label(class="form-label") }}
+            {{ form.arrival_time(class="form-control") }}
+            {% if form.arrival_time.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.arrival_time.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.duration.label(class="form-label") }}
+            {{ form.duration(class="form-control") }}
+            {% if form.duration.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.duration.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.total_stops.label(class="form-label") }}
+            {{ form.total_stops(class="form-control") }}
+            {% if form.total_stops.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.total_stops.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.additional_info.label(class="form-label") }}
+            {{ form.additional_info(class="form-control") }}
+            {% if form.additional_info.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.additional_info.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary btn-lg animated-button") }}
+        </div>
+        
+
+        <div class="mt-3">
+            <p>Redirect to Homepage? <a href="{{ url_for('home') }}" class="btn btn-secondary">Home</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

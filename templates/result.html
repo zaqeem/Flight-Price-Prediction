@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="bg-light p-5 rounded">
+    <h2 class="mb-4">Prediction Result</h2>
+    <p>The predicted price is {{ prediction }} INR!</p>
+
+    <div class="mt-3">
+        <p>Go back to the prediction form? <a href="{{ url_for('predict') }}" class="btn btn-secondary">Back</a></p>
+    </div>
+
+    <div class="mt-3">
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}" class="btn btn-secondary">Home</a></p>
+    </div>
+</div>
+{% endblock %}
